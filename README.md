@@ -1,13 +1,21 @@
 # Go SFTP Upload
 Uploads files to your SFTP server using SCP and SSHPASS
 
-## Command
+<br/>
+
+## Install sshpass (Required)
+### Mac OS
 ```
-go build
-./go-sftp-upload
+brew install esolitos/ipa/sshpass
+```
+### Ubuntu
+```
+apt-get install sshpass
 ```
 
-## Environment Variables
+<br/><br/>
+
+## Setup Environment Variables
 Your `.env` file should contain values for
 ```
 PASSWORD=
@@ -16,3 +24,12 @@ USERNAME=
 SERVER=
 DEST=
 ```
+
+<br/><br/>
+
+## Running the App
+```
+go build
+./go-sftp-upload
+```
+
