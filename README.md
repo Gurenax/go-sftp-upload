@@ -37,7 +37,7 @@ DEST=
 `USERNAME, PASSWORD and SERVER` should be self-explanatory once you have your sftp credentials.
 <br/><br/>
 
-## Running the App
+## Build and Run the App
 ```
 go build
 ./go-sftp-upload
