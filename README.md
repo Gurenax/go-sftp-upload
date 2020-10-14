@@ -26,13 +26,15 @@ apt-get install sshpass
 ## Setup Environment Variables
 Your `.env` file should contain values for
 ```
-PASSWORD=
-SRC=
 USERNAME=
+PASSWORD=
 SERVER=
+SRC=
 DEST=
 ```
-
+`SRC` is the local directory/files you wish to upload.<br/>
+`DEST` is the remote directory where you wish to upload the local directory/files.<br/>
+`USERNAME, PASSWORD and SERVER` should be self-explanatory once you have your sftp credentials.
 <br/><br/>
 
 ## Running the App
