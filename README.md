@@ -10,19 +10,6 @@ My method will provide you with an alternative to simply use a `.env` file where
 
 <br/><br/>
 
-## Install sshpass (Required)
-`sshpass` will allow us to execute `scp` without being prompted for a password.
-### Mac OS
-```
-brew install esolitos/ipa/sshpass
-```
-### Ubuntu
-```
-apt-get install sshpass
-```
-
-<br/><br/>
-
 ## Setup Environment Variables
 Your `.env` file should contain values for
 ```
@@ -35,11 +22,20 @@ DEST=
 `SRC` is the local directory/files you wish to upload.<br/>
 `DEST` is the remote directory where you wish to upload the local directory/files.<br/>
 `USERNAME, PASSWORD and SERVER` should be self-explanatory once you have your sftp credentials.
+
 <br/><br/>
 
-## Build and Run the App
+## Install sshpass, Build and Run the App
+`sshpass` will allow us to execute `scp` without being prompted for a password.
+### Mac OS
 ```
+brew install esolitos/ipa/sshpass
 go build
 ./go-sftp-upload
 ```
-
+### Ubuntu
+```
+apt-get install sshpass
+go build
+./go-sftp-upload
+```
