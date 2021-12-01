@@ -26,6 +26,10 @@ func Scp(env m.Credentials) {
 	// Output bash errors if any
 	bashError := bashCommand.Wait()
 	if bashError != nil {
-		log.Fatal(bashError)
+		if bashError.Error() == "exit status 6" {
+			fmt.Printf("WARNING: If this is your first time running this command, run the following command to allow the rsa check:\n\nscp -r %s %s@%s:%s\n\n", "test.txt", env.Username, env.Server, env.Dest)
+		} else {
+			log.Fatal(bashError)
+		}
 	}
 }
